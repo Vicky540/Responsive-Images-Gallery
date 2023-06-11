@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Cardo&family=Dancing+Script:wght@500&family=EB+Garamond&family=Hind&family=Playfair&family=Poppins:ital,wght@0,300;1,200;1,500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: rgb(63, 94, 251);
+  background: radial-gradient(
+    circle,
+    rgba(63, 94, 251, 1) 0%,
+    rgba(252, 70, 107, 1) 100%
+  );
+}
+
+/* Styling header  */
+
+.heading h1 {
+  position: relative;
+  text-align: center;
+  font-size: 2.5em;
+  font-family: "Playfair", serif;
+  color: greenyellow;
+  text-shadow: 1px 3px 3px rgba(112, 147, 15, 1);
+  margin: 15px 0px;
+}
+.heading h1::before {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 4px;
+  bottom: -10px;
+  left: 50%;
+  background-color: darkgreen;
+  transform: translateX(-45%);
+  animation: animate 3s linear infinite;
+}
+@keyframes animate {
+  0% {
+    width: 100px;
+  }
+  50% {
+    width: 200px;
+  }
+  100% {
+    width: 100px;
+  }
+}
+
+/* End Styling header  */
+
+.image-section .image-container {
+  margin: 20px;
+  padding: 19px;
+  display: grid;
+  grid-template-columns: 3fr 3fr 3fr;
+  place-items: center;
+}
+.image-section .image-container .img1 img {
+  border-radius: 5px;
+  margin-bottom: 20px;
+  transition-duration: 1s;
+  transition-duration: 0.5s;
+}
+.image-section .image-container .img1 img:hover {
+  transform: rotate(360deg);
+  transform: scale(1.5);
+  margin: 30px;
+  border-radius: 5px;
+  -webkit-box-shadow: -1px 4px 14px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -1px 4px 14px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: -1px 4px 14px 0px rgba(0, 0, 0, 0.75);
+}
+@media screen and (max-width: 900px) {
+  .image-section .image-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
